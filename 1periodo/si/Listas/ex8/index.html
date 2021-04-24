@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <meta charset="UTF-8">
+        <meta name="description" content="Formulário HTML">
+        <meta name="keywords" content="html, forms, cliente">
+        <meta name="author" content="Sayuri Karoline Inouye Nogueira">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Language" content="pt-br">        
+        <title>Cadastro de Clientes</title>
+    </head>    
+
+    <body>
+        <style>
+            
+            body {
+                font-family: arial;
+            }
+            .form-group {
+                border: 2px solid #666666;
+                margin-bottom: 35px;
+                padding: 30px;
+                padding-top: 15px;
+            }
+            .form-group h2 {
+                float: left;
+                padding: 0px 10px;
+                margin: 0;
+                margin-top: -28px;
+                margin-left: -10px;
+                background: #fff;
+                font-size: 18px;
+            }
+
+        </style>
+        <h1>Cadastro de Clientes</h1>
+        <p style="color:red">Todos os campos são de preenchimento obrigatório</p><br>
+        <form id="form">
+            <div class="form-group">
+                <h2>Dados pessoais</h2><br>
+                <label for="fnome">Nome:</label><br>
+                <input type="text" required id="fnome" name="fnome"><br><br>
+
+                <label for="fnasc">Data de Nascimento:</label><br>
+                <input type="date" required id="fnasc" name="fnasc"><br><br>
+
+                <label>Sexo:</label><br>
+                <input type="radio" required id="fmasc" name="fsexo" value="male">
+                <label for="fmasc">Masculino</label>
+
+                <input type="radio" id="ffemale" name="fsexo" value="female">
+                <label for="ffemale">Feminino</label>
+
+                <input type="radio" id="fother" name="fsexo" value="other">
+                <label for="fother">Outros</label>
+            </div>
+            
+            <div class="form-group">
+                <h2>Informações de contato</h2><br>
+                <label for="fmail">E-mail:</label><br>
+                <input type="email" required id="fmail" name="fmail"><br><br>
+                
+                <label for="fcel">´Telefone celular:</label><br>
+                <input type="tel" required id="fcel" name="fcel" maxlength="9"><br><br>
+                
+                <label for="fsite">Website Pessoal:</label><br>
+                <input type="url" required id="fsite" name="fsite">
+            </div>
+
+            <div class="form-group">
+                <h2>Localização</h2><br>
+                <label for="fend">Endereço:</label><br>
+                <input type="text" required id="fend" name="fend"><br><br>
+                
+                <label for="fnum">Número:</label><br>
+                <input type="number" required id="fnum" name="fnum" min="1" max="9999"> <br><br>
+               
+                <label for="fcid">Cidade:</label><br>
+                <input type="text" required id="fcid" name="fcid"><br><br>
+                
+                <label for="fest">Cidade:</label><br>
+                <select required id="fest" name="fest">
+                    <option disabled selected>Selecione o estado...</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>     
+            
+            <input type="submit" value="Cadastrar">
+            <button onclick="getElementById('form').reset();">Limpar</button>
+            
+
+          </form>
+        
+    </body>
+
+</html>
